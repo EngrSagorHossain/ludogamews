@@ -40,10 +40,20 @@
         </div>
     </div>
 
+
+
+
+
+
     <script src="/js/main.js" type="module"></script>
-    <script>
-        window.Echo.channel('chat')
+    <!-- Initialize Echo channel -->
+    <script type="module">
+        var channel = Echo.channel('my-channel');
+        channel.listen('my-event', function(data) {
+            alert(JSON.stringify(data));
+        });
     </script>
+
 </body>
 
 </html>
