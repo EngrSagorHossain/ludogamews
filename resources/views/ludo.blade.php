@@ -48,9 +48,10 @@
     <script src="/js/main.js" type="module"></script>
     <!-- Initialize Echo channel -->
     <script type="module">
-        var channel = Echo.channel('my-channel');
-        channel.listen('my-event', function(data) {
-            alert(JSON.stringify(data));
+        var channel = Echo.channel('ludo');
+        channel.listen('Ludogame', function(data) {
+            console.log(data);
+
         });
     </script>
 
